@@ -1,0 +1,130 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* Header styles */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+    background: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h2 {
+    margin: 0 0 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: #e74c3c;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+.btn-primary:hover {
+    background: #c0392b;
+}
+
+/* Section styles */
+section {
+    padding: 2rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.service, .contact-form, .course-item, .data-analyst {
+    margin: 1rem 0;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-primary {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Footer styles */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
