@@ -1,1 +1,145 @@
-welcom
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Royal Data Insights’ premier Data Analysis Bootcamp and enhance your data skills with our expert-led training and hands-on projects.">
+    <title>Royal Data Insights - Elevate Your Data Analysis Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for the slider */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .nav-btn {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 1rem;
+            cursor: pointer;
+        }
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Royal Data Insights</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="meet-our-team.html">Meet Our Team</a></li>
+                    <li><a href="course.html">Courses</a></li> 
+                    <li><a href="registration.html">Registration</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to Royal Data Insights</h2>
+            <p>Empower Your Career with Cutting-Edge Data Analysis Training</p>
+            <a href="course.html" class="btn-primary">Explore Our Bootcamp</a>
+        </div>
+    </section>
+
+    <section class="slider">
+        <div class="slides">
+            <!-- Slide 1: About Us -->
+            <div class="slide">
+                <img src="aboutus-banner.jpg" alt="About Us">
+                <div class="slide-content">
+                    <h2>About Us</h2>
+                    <p>At Royal Data Insights, we transform data into actionable insights. Our expert-led bootcamp provides the skills and knowledge needed to excel in today’s data-driven world.</p>
+                    <a href="aboutus.html" class="btn-primary">Learn More</a>
+                </div>
+            </div>
+            <!-- Slide 2: Courses -->
+            <div class="slide">
+                <img src="courses-banner.jpg" alt="Courses">
+                <div class="slide-content">
+                    <h2>Our Courses</h2>
+                    <p>Our comprehensive bootcamp covers everything from data cleaning to machine learning. Get hands-on experience with real-world projects and expert instruction.</p>
+                    <a href="course.html" class="btn-primary">View Courses</a>
+                </div>
+            </div>
+            <!-- Slide 3: Registration -->
+            <div class="slide">
+                <img src="registration-banner.jpg" alt="Registration">
+                <div class="slide-content">
+                    <h2>Register Now</h2>
+                    <p>Secure your spot in our upcoming bootcamp and start your journey towards becoming a data analysis expert. Enroll now and take the first step towards a successful career.</p>
+                    <a href="contact.html" class="btn-primary">Apply Now</a>
+                </div>
+            </div>
+            <!-- Slide 4: Meet Our Tutors -->
+            <div class="slide">
+                <img src="tutors-banner.jpg" alt="Meet Our Tutors">
+                <div class="slide-content">
+                    <h2>Meet Our Expert Tutors</h2>
+                    <p>Our seasoned professionals are here to guide you through every step of your learning journey. Meet our team of experts and discover their passion for data analysis.</p>
+                    <a href="meettour.html" class="btn-primary">Meet Our Tutors</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <button class="nav-btn" id="prev-slide">&lt;</button>
+            <button class="nav-btn" id="next-slide">&gt;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Royal Data Insights. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const slideCount = document.querySelectorAll('.slide').length;
+        let index = 0;
+
+        document.getElementById('next-slide').addEventListener('click', () => {
+            index = (index + 1) % slideCount;
+            updateSlidePosition();
+        });
+
+        document.getElementById('prev-slide').addEventListener('click', () => {
+            index = (index - 1 + slideCount) % slideCount;
+            updateSlidePosition();
+        });
+
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</body>
+</html>
